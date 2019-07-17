@@ -1,0 +1,141 @@
+﻿@model IEnumerable<eCommerceMVC.ViewModels.CompareProducts>
+
+@{
+    ViewBag.Title = "Fan";
+}
+
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/Content/bootstrap.min.css" type="text/css" rel="stylesheet" />
+    <link href="~/Content/Compare.css" type="text/css" rel="stylesheet" />
+    <link href="~/Content/Product.css" type="text/css" rel="stylesheet" />
+    <link href="~/Content/Site.css" type="text/css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css" rel="stylesheet" />
+    <title>EnterCustomer</title>
+</head>
+<div style="height:100px" class="headcol">
+    <br />
+    Joole
+</div>
+<style>
+    table, th, td {
+        border: 2px solid grey;
+        border-collapse: collapse;
+    }
+
+    th, td {
+        padding: 5px;
+        text-align: left;
+    }
+
+    .rowback {
+        font: bold 12 px;
+    }
+</style>
+<table style="width:100%">
+    <tr>
+        <td style="height:150px"></td>
+        @foreach (var obj in Model as IEnumerable<eCommerceMVC.ViewModels.CompareProducts>)
+        {
+        <td style="text-align:center">
+            <img src="@obj.ImageURL" height="200" width="200" />
+            
+        </td>
+          
+        }
+
+    </tr>
+    <tr>
+        <td class="rowback" colspan="3"><b>DESCRIPTION</b></td>
+    </tr>
+    <tr>
+        <td class="rowback" style="width:110px"><b>Manufacture</b></td>
+        @foreach (var obj in Model as IEnumerable<eCommerceMVC.ViewModels.CompareProducts>)
+        {
+            <td>@obj.ProductName.</td>
+        }
+            
+
+        </tr>
+    <tr>
+        <td class="rowback"><b>Series</b></td>
+        @foreach (var obj in Model as IEnumerable<eCommerceMVC.ViewModels.CompareProducts>)
+        {
+            <td>@obj.SeriesName</td>
+        }
+            
+        </tr>
+    <tr>
+        <td class="rowback"><b>Model</b></td>
+        @foreach (var obj in Model as IEnumerable<eCommerceMVC.ViewModels.CompareProducts>)
+        {
+            <td>@obj.ModelName</td>
+        }
+        </tr>
+    <tr>
+        <td class="rowback" colspan="3"><b>TYPE</b></td>
+    </tr>
+    <tr>
+        <td class="rowback"><b>Use Type</b></td>
+        @foreach (var obj in Model as IEnumerable<eCommerceMVC.ViewModels.CompareProducts>)
+        {
+            <td>@obj.UseType</td>
+        }
+
+        </tr>
+    <tr>
+        <td class="rowback"><b>Application</b></td>
+        @foreach (var obj in Model as IEnumerable<eCommerceMVC.ViewModels.CompareProducts>)
+        {
+            <td>@obj.Application</td>
+        }
+        </tr>
+    <tr>
+        <td class="rowback"><b>Mounting Location</b></td>
+        @foreach (var obj in Model as IEnumerable<eCommerceMVC.ViewModels.CompareProducts>)
+        {
+            <td>@obj.MountingLocation</td>
+        }
+        </tr>
+    <tr>
+        <td class="rowback"><b>Acessories</b></td>
+        @foreach (var obj in Model as IEnumerable<eCommerceMVC.ViewModels.CompareProducts>)
+        {
+            <td>@obj.Accessories</td>
+        }
+        </tr>
+    <tr>
+        <td class="rowback"><b>Model Year</b></td>
+        @foreach (var obj in Model as IEnumerable<eCommerceMVC.ViewModels.CompareProducts>)
+        {
+            <td>@obj.ModelYear</td>
+        }
+        </tr>
+    <tr>
+        <td class="rowback" colspan="3"><b>TECHNICAL SPECS</b></td>
+    </tr>
+    <tr>
+        <td class="rowback"><b>Air Flow</b></td>
+        @foreach (var obj in Model as IEnumerable<eCommerceMVC.ViewModels.CompareProducts>)
+        {
+              <td>@obj.AirFlow</td>
+        }
+        </tr>
+    <tr>
+        <td class="rowback"><b>Fan Speed</b></td>
+        @foreach (var obj in Model as IEnumerable<eCommerceMVC.ViewModels.CompareProducts>)
+        {
+            <td>@obj.NumOfFanSpeed</td>
+        }
+        </tr>
+
+    <tr>
+        <td class="rowback"><b>Fan Sweep</b></td>
+        @foreach (var obj in Model as IEnumerable<eCommerceMVC.ViewModels.CompareProducts>)
+        {
+            <td>@obj.FanSweepDiameter</td>
+        }
+        </tr>
+</table>
+
+

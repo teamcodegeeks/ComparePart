@@ -1,0 +1,16 @@
+﻿@model eCommerceMVC.Models.Product
+
+@{
+    ViewBag.Title = "ProductDropDown";
+}
+<form action=@Url.Action("FindbysubcatID", "Compare") method="post">
+    <label>Product SubCategory  </label>
+    <input type="text" name="prodID1" placeholder="Product ID 1" />
+    <input type="text" name="prodID2" placeholder="Product ID 2" />
+    <input type="text" name="subcatID" placeholder="Sub Category ID" />
+    <input type="submit" value="Submit" />
+</form>
+
+
+
+
